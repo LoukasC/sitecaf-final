@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+body{
+    font-family: 'PT', sans-serif;
+}
+
+
+#header{
+    display: flex;
+    flex-direction: column;
+    background-color: #1093d4;
+}
+
+#logo_bar{
+    background-color: black;
+    padding: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #9a785c;
+}
+
+
+/* Estilização do menu */
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #9a785c;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+li a:hover{
+    background-color: black;
+    transition: 0.6s;
+    border-radius: 5px;
+}
+
+
+
+/* estilo do botão hamburguer */
+#btt_menu{
+    display: none;
+}
+
+label[for="btt_menu"]{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    cursor: -moz-grab;
+}
+
+@media(max-width: 800px){
+
+    #header{
+        text-align: center;
+    }
+
+    label[for="btt_menu"]{
+        display: block;
+    }
+
+    #btt_menu:checked ~ #nav{
+        display: block;
+    }
+
+    #nav{
+        display: none;
+    }
+
+    #nav li{
+        float: none;
+        text-align: center;
+    }
+
+    #nav a{
+        text-align: center;
+    }
+
+    .container{
+        display: block;
+        width: auto;
+        margin: 0px;
+    }
+
+    .box{
+        width: auto;
+    }
+}
+
+@media(max-width: 400px){
+
+    #logo_bar{
+        font-size: 20px;
+    }
+
+    label[for="btt_menu"]{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+}
